@@ -2,7 +2,7 @@ name: GITHUB_OUTPUT
 on: workflow_dispatch
 jobs:
   share:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - id: source
         run: echo "a=hello" >> "{{GITHUB_OUTPUT}}"
