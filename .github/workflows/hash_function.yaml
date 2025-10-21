@@ -1,9 +1,10 @@
 name: Hash Function
 on: workflow_dispatch
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v4
-    - run: echo "${HASH}"
-      env:
-        HASH: ${{ hashFiles('.github/workflows/*.yaml') }}
+  hash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "${HASH}"
+        env:
+          HASH: ${{ hashFiles('.github/workflows/*.yaml') }}
